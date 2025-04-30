@@ -4,7 +4,7 @@ export default function Home() {
 	return (
 		<>
 			{/* z1: efek */}
-			<div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-r from-[#6B664E]/100 via-[#F8F0CC]/40 to-[#59543E]/95" />
+			<div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-b from-[#6B664E]/100 via-[#F8F0CC]/40 to-[#59543E]/95" />
 
 			{/* z2: Gambar */}
 			<Image
