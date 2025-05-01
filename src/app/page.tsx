@@ -65,6 +65,8 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+
+			test aja
 		</div>
 	);
 }
