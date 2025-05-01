@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
 	return (
-		<>
+		<div>
 			{/* z1: efek */}
 			<div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-b from-[#6B664E]/100 via-[#F8F0CC]/40 to-[#59543E]/95" />
 
