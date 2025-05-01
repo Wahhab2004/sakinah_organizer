@@ -13,7 +13,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        head : ["Eden", "sans-serif"],
+        head : ["Eden"],
       },
     },
   },
