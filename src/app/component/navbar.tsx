@@ -22,13 +22,13 @@ export default function Navbar() {
 		{ name: "Our Service", path: "/service" },
 		{ name: "Package", path: "/package" },
 		{ name: "Reservation", path: "/reservation" },
-		{ name: "Contact Us", path: "/contact" },
+		{ name: "Contact Us", path: "#contact" },
 		{ name: "FAQ", path: "/faq" },
 	];
 
 	const navStyle = `items-center bg-[#302C29]/60 absolute lg:fixed left-1/2 transform -translate-x-1/2 z-50 shadow-md w-full transition-all duration-500 ${
 		isScrolled
-			? "lg:top-10 lg:rounded-full lg:w-[60%] xl:w-[60%]"
+			? "lg:top-10 lg:rounded-full lg:w-[80%] xl:w-[60%]"
 			: "lg:top-0 lg:rounded-none lg:w-screen"
 	}`;
 
@@ -40,7 +40,7 @@ export default function Navbar() {
 
 	return (
 		<nav className={navStyle}>
-			<div className="lg:hidden flex justify-between items-center px-4 py-3">
+			<div className="lg:hidden flex justify-between items-center px-4 py-5">
 				<div className="text-white font-semibold">Sakinah Wedding</div>
 				<button
 					className="text-white focus:outline-none"
@@ -51,8 +51,8 @@ export default function Navbar() {
 			</div>
 
 			<ul
-				className={`lg:flex justify-center items-center space-y-4 lg:space-y-0 lg:space-x-14 text-white h-[70px] lg:h-[70px] text-center transition-all duration-300 ${
-					isOpen ? "h-[350px] flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:h-[70px]" : "hidden lg:flex" 
+				className={` lg:flex justify-center items-center space-y-4 lg:space-y-0 lg:space-x-14 text-white lg:h-[80px]  text-center transition-all duration-300 ${
+					isOpen ? "h-[350px] flex flex-col space-y-4 lg:space-y-0 lg:flex-row " : "hidden lg:flex" 
 				}`}
 			>
 				{menus.map((menu) => (
