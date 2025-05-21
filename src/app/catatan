@@ -2,3 +2,10 @@
 
 1. Navbar (Responsive)
 2. Footer ()
+
+
+
+## PANDUAN PENGEMBANGAN
+Head --> text-2xl
+Sub-head (penjelasan) --> text-xm
+body --> text xs
