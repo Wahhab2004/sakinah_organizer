@@ -1,7 +1,9 @@
 ## To Do List
 
-1. Navbar (Responsive)
-2. Footer ()
+1. Navbar (Responsive) ✓
+2. Footer (Responsive) ✓
+3. FAQ (Responsive) ✓
+4. Package (Responsive)
 
 
 
@@ -9,3 +11,7 @@
 Head --> text-2xl
 Sub-head (penjelasan) --> text-xm
 body --> text xs
+
+
+## Catatan
+Apa perbedaan export menggunakan kurung kurawal dengan bukan
