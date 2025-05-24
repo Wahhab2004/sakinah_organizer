@@ -11,7 +11,7 @@ export default function Package() {
 			{/* Hero Section */}
 			<section className="relative h-[500px] sm:h-[600px] md:h-screen">
 				{/* Background Layers */}
-				<div className="absolute inset-0 z-30 pointer-events-none bg-gradient-to-r from-[#59543E] from-0% via-[#F8F0CC]/10 from-10% to-[#F8F0CC]/0  " />
+				<div className="absolute inset-0 z-30 pointer-events-none bg-gradient-to-b from-[#59543E] from-0% via-[#F8F0CC]/10 from-10% to-[#F8F0CC]/0  " />
 				{/* Image */}
 				<Image
 					className="z-20 h-screen object-cover absolute right-0 w-screen top-0 left-0 object-cover opacity-40"

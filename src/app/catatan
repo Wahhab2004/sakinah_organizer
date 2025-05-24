@@ -15,9 +15,13 @@ body --> text xs
 
 ## Catatan
 Apa perbedaan export menggunakan kurung kurawal dengan bukan
+1. Package itu dijadikan seperti faq saja
+2. Font footer bisa dikeclin
+3. Package itu nanti pakai list dist
 
 
 ## Catatan untuk Azky
 1. Tolong diperhatikan penggunaan warna nya
 2. Ukuran font title, font head, font body diusahakan konsisten. 
 3. Saran, lebih banyak gunain components tailwind
+
