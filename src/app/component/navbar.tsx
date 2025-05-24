@@ -19,7 +19,7 @@ export default function Navbar() {
 
 	const menus = [
 		{ name: "Home", path: "/" },
-		{ name: "Our Service", path: "/service" },
+		{ name: "Our Service", path: "/our-service" },
 		{ name: "Package", path: "/package" },
 		{ name: "Reservation", path: "/reservation" },
 		{ name: "Contact Us", path: "#contact" },
