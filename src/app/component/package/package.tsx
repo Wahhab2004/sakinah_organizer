@@ -103,10 +103,10 @@ export function PackageCard({
 							<h3>
 								<span className="font-head text-xl">{sectionTitle}</span>
 							</h3>
-							<ul className="list-decimal pl-5 mt-2">
+							<ul className="pl-5 mt-2">
 								{items.map((item, idx) => (
 									<li
-										className="flex items-center gap-2 text-sm italic"
+										className="list-decimal flex items-center gap-2 text-sm italic"
 										key={idx}
 									>
 										- {item}
