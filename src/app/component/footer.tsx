@@ -3,7 +3,10 @@ import Link from "next/link";
 
 export default function Footer() {
 	return (
-		<footer className="bg-[#302C29] text-white py-10 px-6 md:px-10 w-full relative z-40" id="contact">
+		<footer
+			className="bg-[#302C29] text-white py-2 px-6 md:px-10 w-full relative z-40"
+			id="contact"
+		>
 			<div className="text-[#E1CD9F]/80 max-w-[1400px] mx-auto mb-20">
 				{/* Brand */}
 				<div>
@@ -72,10 +75,10 @@ export default function Footer() {
 							<div>
 								<h2 className="font-semibold">Email</h2>
 								<Link
-									href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfsckCDTRQwWHsVSjlJpclLZCWhlStBgJmTFFTvcZLSMgqjNGZNbtBpSgKJMgWgGQPKhJq"
+									href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdMWGhqksmqbHMLrQZmRgRwLLrsJPQCpJtgSTJVKTHJbBgljJLcZSPntrvrlqRlMGBPKTJl"
 									target="_blank"
 								>
-									<p className="text-sm">masjidkampus@ugm.ac.id</p>
+									<p className="text-sm">sowedding.maskamugm@gmail.com</p>
 								</Link>
 							</div>
 						</div>
@@ -87,13 +90,13 @@ export default function Footer() {
 						<div className="flex flex-col gap-4 items-center w-[256px]">
 							<h2 className="text-xl font-semibold text-center">Service</h2>
 							<div className="flex gap-8 justify-center font-medium">
-								<ul className="list-disc text-sm leading-6">
+								<ul className="list-disc text-xs leading-6">
 									<li>Decoration</li>
 									<li>Photography</li>
 									<li>Videography</li>
 									<li>Event Planner</li>
 								</ul>
-								<ul className="list-disc text-sm leading-6">
+								<ul className="list-disc text-xsy leading-6">
 									<li>MC and Qori&apos;</li>
 									<li>Catering</li>
 									<li>MUA</li>
