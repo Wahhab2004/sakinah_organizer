@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function LoveStory() {
 	return (
-		<section className="relative h-[70vh] bg-[#604A32]">
-			<div className="flex p-16 text-white">
-				<div className="w-[50rem] ml-20">
-					<h1 className="font-head text-[32px]">
+		<section className="relative  md:h-[90vh] lg:h-[60vh] bg-[#604A32]">
+			<div className="flex p-6 md:p-10 lg:p-16 text-white">
+				<div className="md:w-1/2 lg:w-[50rem] lg:ml-20">
+					<h1 className="font-head text-2xl sm:text-4xl md:text-5xl lg:text-[32px]  leading-tight" >
 						Cinematic Love Story Begins Here
 					</h1>
 
-					<p className="text-xl mt-10 text-justify">
+					<p className="text-xs sm:text-sm md:text-base  lg:text-xl mt-4 md:mt-6 lg:mt-10 text-justify">
 						Di balik setiap pernikahan, tersimpan kisah cinta yang layak
 						diceritakan dengan indah. Tim fotografi dan videografi Sakinah
 						Wedding siap menangkap setiap momen sakral Anda dalam visual
@@ -21,10 +21,10 @@ export default function LoveStory() {
 
 				<Image
 					src="/svg/bg-lovestory.svg"
-					width={300}
-					height={450}
+					width={370}
+					height={550}
 					alt="love-story"
-					className="absolute right-32 top-0"
+					className="absolute hidden md:block right-0 lg:right-32 top-0 lg:h-[55vh] "
 				/>
 			</div>
 		</section>
