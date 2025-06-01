@@ -44,7 +44,8 @@ export default function HeroSection() {
 						sentuhan elegan dan penuh makna. Kami berkomitmen menjadikan momen
 						sakral Anda indah, berkesan, dan tak terlupakan.
 					</p>
-					<button className="bg-[#302C29] w-[140px] sm:w-[150px] mt-6 mx-auto lg:mx-0 py-2 rounded text-white text-sm sm:text-base md:text-lg lg:text-xl hover:bg-[#E1CD9F] transition duration-300">
+                    {/* Ukurann font ini gak selaras */}
+					<button className="bg-[#302C29] w-[120px] sm:w-[140px] mt-6 mx-auto lg:mx-0 py-2 rounded text-white text-xs sm:text-base md:text-lg lg:text-xl hover:bg-[#E1CD9F] transition duration-300">
 						Our Service
 					</button>
 				</div>
