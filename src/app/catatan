@@ -13,14 +13,14 @@ body --> text xs
 
 ## Catatan
 Apa perbedaan export menggunakan kurung kurawal dengan bukan
-1. Package itu dijadikan seperti faq saja
-2. Font footer bisa dikeclin
-3. Package itu nanti pakai list dist
-4. FAQ ketika dibuka semua dia ketutupan footer. Dibuat ketika ketik yang lain, yang satunya ditutup aja
+1. Package itu dijadikan seperti faq saja ✓
+2. Font footer bisa dikeclin ✓
+3. Package itu nanti pakai list dist ✓
+4. FAQ ketika dibuka semua dia ketutupan footer. Dibuat ketika ketik yang lain, yang satunya ditutup aja ✓
 5. Navbar ketika pindah ka yang lain langsung ditutup
-6. Footer lebih dipadatin
+6. Footer lebih dipadatin 1/2 ✓
 7. Coba apakah bisa pakai inpt atau tidak
-8. Navbar contact us belum bener
+8. Navbar contact us belum bener ✓
 
 
 ## Catatan untuk Azky

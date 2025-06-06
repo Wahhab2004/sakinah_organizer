@@ -1,7 +1,4 @@
-import {
-	Ellipse,
-	HeroText,
-} from "@/app/component/package/package";
+import { Ellipse, HeroText } from "@/app/component/package/package";
 import Image from "next/image";
 import PackageCarousel from "@/app/component/package/packageCarousel";
 
@@ -25,9 +22,11 @@ export default function Package() {
 				<Ellipse />
 			</section>
 
-			<div className="relative h-[1800px] bg-[#59543E] mx-auto">
+			<div className="relative h-[2000px] bg-[#59543E] mx-auto">
+
+				{/* PR: Gimana caranya dia melebarnya itu ketika di expanded */}
 				<Image
-					className="absolute z-10 w-full h-[1850px] object-cover top-0 left-0 right-0 bottom-0"
+					className="absolute z-10 w-full h-[2050px] object-cover top-0 left-0 right-0 bottom-0"
 					width={2000}
 					height={5000}
 					src="/svg/bg-package-02.svg"
@@ -52,9 +51,7 @@ export default function Package() {
 					</p>
 				</div>
 
-				<div className="absolute z-40 w-full md:p-10 text-white mt-[22rem] md:mt-[27rem] lg:mt-[33rem]">
-					<PackageCarousel />
-				</div>
+				<PackageCarousel />
 			</div>
 		</div>
 	);

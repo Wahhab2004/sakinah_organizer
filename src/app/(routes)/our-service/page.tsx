@@ -1,7 +1,6 @@
 import Testimonial, { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import Image from "next/image";
 import Link from "next/link";
-import test from "node:test";
 
 const dummyTestimonials: Testimonial[] = [
   {
@@ -151,7 +150,7 @@ export default function OurService() {
 				</div>
 			</section>
 
-			{/* <AnimatedTestimonials testimonials={dummyTestimonials} /> */}
+			<AnimatedTestimonials testimonials={dummyTestimonials} />
 		</div>
 	);
 }

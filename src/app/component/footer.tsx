@@ -7,7 +7,7 @@ export default function Footer() {
 			className="bg-[#302C29] text-white py-2 px-6 md:px-10 w-full relative z-40"
 			id="contact"
 		>
-			<div className="text-[#E1CD9F]/80 max-w-[1400px] mx-auto  py-4 md:py-0 mb-10 md:mb-16 lg:mb-20">
+			<div className="text-[#E1CD9F]/80 max-w-[1400px] mx-auto  py-4 md:p-6 mb-10 md:mb-16 lg:mb-20">
 				{/* Brand */}
 				<div>
 					<h1 className="text-xl sm:text-2xl md:text-3xl md:text-4xl font-semibold">
