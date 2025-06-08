@@ -422,68 +422,11 @@ export default function ReservationForm() {
 	);
 }
 
-interface CustomDateInputProps {
-	onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-	placeholder?: string;
-}
 
-export function CustomDateInput({
-	onChange,
-	placeholder = "Pilih Tanggal Akad",
-}: CustomDateInputProps) {
-	const [hasValue, setHasValue] = useState(false);
-
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setHasValue(!!e.target.value); // Set true jika ada nilai, false jika kosong
-		if (onChange) {
-			onChange(e);
-		}
-	};
-
-	return (
-		<div className="relative mb-6">
-			<label
-				htmlFor="tanggalAkad"
-				className="flex items-center mb-2 text-sm text-[#C2AF84]"
-			>
-				Tanggal Akad
-			</label>
-
-			<div className="relative">
-				<input
-					type="date"
-					name="tanggalAkad"
-					id="tanggalAkad"
-					className="block w-full h-11 pr-10 pl-6 py-2.5 text-base font-normal shadow-xs bg-[#4B443F] rounded-full focus:outline-none text-white peer"
-					required
-					onChange={handleInputChange}
-				/>
-				{/* Placeholder kustom */}
-				<span
-					className={`absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none transition-opacity duration-200 ${
-						hasValue ? "opacity-0 " : "opacity-100"
-					}`}
-				>
-					{placeholder}
-				</span>
-				{/* Ikon kustom */}
-				<span className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-					<svg
-						className="w-5 h-5 text-[#C2AF84]"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth="2"
-							d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-						/>
-					</svg>
-				</span>
-			</div>
+export function Calendar() {
+	return(
+		<div>
+			
 		</div>
-	);
+	)
 }
