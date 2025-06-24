@@ -32,3 +32,28 @@ Apa perbedaan export menggunakan kurung kurawal dengan bukan
 1. Boleh gak, untuk home, gambarnya itu selain dari dekstop dia full?
 2. Tombol reservasi bisakah ditempatkan dibagian kiri?
 3. Love story terlalu banyak space yang terbuang
+
+
+## Catatan
+Home
+1. Text tetap dua opsi: di global atau gaanti
+2. Text dihilangkan
+3. Our service bisa diklik dan mengarahkan ke halaman terkait
+
+Our Service
+1. Heading nya jangan kapital
+2. Space nya coba dikurangin ketika packagenya belum dibuka
+
+Footer
+1. Jangan lupa footer ya bro
+
+Calendar
+1. Warnanya disesuaikan kembali
+2. Tulisannya ke timpa bro, ke bawahin dong
+
+Reservation Form
+1. Harga menyesuaikan dengan kategori, harga dicoret
+2. Checkbox menyesuaikan figma, jarak lebih jauh
+3. Ketika submit, wa maskam akan me wa pengguna nya
+
+1. Di maskam, kalau pilih akad, akan dialihkan ke sakinah organizer

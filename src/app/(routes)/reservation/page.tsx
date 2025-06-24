@@ -4,8 +4,8 @@ import { MonthCalendar } from "./calendar";
 
 export default function Reservation() {
 	const sampleEvents: { title: string; date: Date }[] = [
-		{ title: "Kajian Umum", date: new Date(2025, 4, 1) }, // 1 Mei 2025
-		{ title: "Rapot Web", date: new Date(2025, 4, 5) }, // 5 Mei 2025
+		{ title: "Kajian Umum", date: new Date(2025, 5, 1) }, 
+		{ title: "Rapot Web", date: new Date(2025, 5, 5) }, 
 	];
 	return (
 		<div>
@@ -37,7 +37,7 @@ export default function Reservation() {
 					</div>
 				</div>
 
-				<div className="p-4">
+				<div className="absolute inset-0 flex justify-center items-center z-40 mt-[20rem]">
 					<MonthCalendar
 						currentDate={new Date(2025, 4, 1)}
 						events={sampleEvents}

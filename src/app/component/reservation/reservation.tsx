@@ -238,9 +238,9 @@ export default function ReservationForm() {
 						>
 							<path
 								stroke="currentColor"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
 								d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
 							/>
 						</svg>
@@ -277,9 +277,9 @@ export default function ReservationForm() {
 						>
 							<path
 								stroke="currentColor"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
 								d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
 							/>
 						</svg>
@@ -350,24 +350,27 @@ export default function ReservationForm() {
 				</div>
 			</div>
 
-			{/* Kategori Mempelai */}
-			{/* <div className="relative mb-6">
+			<div className="relative mb-6">
 				<label
 					htmlFor="kategoriMempelai"
-					className="flex items-center mb-2 text-sm "
+					className="flex items-center mb-2 text-sm"
 				>
 					Kategori Mempelai
 				</label>
-
-				<div className="relative ">
-					<select name="1" id="1">
-						<option value="1">1</option>
-						<option value="1">1</option>
-						<option value="1">1</option>
-						<option value="1">1</option>
+				<div className="relative">
+					<select
+						name="kategoriMempelai"
+						id="kategoriMempelai"
+						className="block w-full h-11 px-6 py-2.5 text-base font-normal shadow-xs bg-[#4B443F] text-white rounded-full focus:outline-none appearance-none"
+					>
+						<option defaultValue={"default"} disabled selected >
+							Pilih Kategori
+						</option>
+						<option value="pria">Pria</option>
+						<option value="wanita">Wanita</option>
 					</select>
 				</div>
-			</div> */}
+			</div>
 
 			{/* Kertu Identitas */}
 			<div className="relative mb-6">
@@ -422,11 +425,6 @@ export default function ReservationForm() {
 	);
 }
 
-
 export function Calendar() {
-	return(
-		<div>
-			
-		</div>
-	)
+	return <div></div>;
 }

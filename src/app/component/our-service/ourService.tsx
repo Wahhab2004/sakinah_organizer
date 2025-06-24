@@ -25,10 +25,10 @@ export function HeroSection() {
 			<div className="absolute inset-0 flex flex-col justify-center px-4 sm:px-6 md:px-8 xl:px-20 z-40 max-w-full  ">
 				<div className="text-center md:text-start">
 					<h1 className="text-white text-3xl sm:text-5xl md:text-6xl lg:text-[80px] font-head -translate-y-2 sm:-translate-y-2 ">
-						CREATING MOMENTS
+						Creating Moments
 					</h1>
 					<h1 className="text-white text-3xl sm:text-5xl md:text-6xl lg:text-[80px] font-head ">
-						DELIVERING MEMORIES
+						Delivering Mome
 					</h1>
 				</div>
 

@@ -84,11 +84,11 @@ export function PackageCard({
 	};
 
 	return (
-		<div className="p-6 bg-[#59543E]/40 rounded-3xl shadow-lg w-full md:w-[300px] lg:w-[400px] h-fit md:h-full lg:h-fit pb-20 mx-auto transition-transform hover:scale-105">
-			<h1 className={`font-head text-3xl text-center ${titleColor}`}>
+		<div className="p-6 bg-[#59543E]/0 md:bg-[#59543E]/70  rounded-3xl shadow-lg w-full md:w-[300px] lg:w-[400px] h-fit md:h-full lg:h-fit pb-20 mx-auto transition-transform hover:scale-105">
+			<h1 className={`font-head text-2xl text-center ${titleColor}`}>
 				{data.name}
 			</h1>
-			<h2 className="font-head text-3xl text-center">{data.price}</h2>
+			<h2 className="font-head text-2xl text-center">{data.price}</h2>
 
 			<div className="pl-4">
 				{Object.entries(data).map(([key, value]) => {
@@ -101,11 +101,11 @@ export function PackageCard({
 					return (
 						<div key={key} className="mt-4">
 							<h3>
-								<span className="font-head text-xl">{sectionTitle}</span>
+								<span className="-ml-2 font-head text-xl">{sectionTitle}</span>
 							</h3>
-							<ul className="pl-5 mt-2 list-disc">
+							<ul className="pl-3 list-disc font-light">
 								{items.map((item, idx) => (
-									<li className=" text-sm italic" key={idx}>
+									<li className="text-xs md:text-sm italic" key={idx}>
 										{item}
 									</li>
 								))}

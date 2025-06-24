@@ -59,10 +59,10 @@ export function MonthCalendar({
 		);
 	};
 
-	const handleToday = () => {
-		setDate(new Date());
-		console.log("Navigating to today:", format(new Date(), "MMMM yyyy"));
-	};
+	// const handleToday = () => {
+	// 	setDate(new Date());
+	// 	console.log("Navigating to today:", format(new Date(), "MMMM yyyy"));
+	// };
 
 	// Ambil event untuk hari tertentu
 	const getEventsForDay = (day: Date): string[] => {
@@ -72,39 +72,39 @@ export function MonthCalendar({
 	};
 
 	return (
-		<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-800 text-gray-200 rounded-lg p-4 z-40">
+		<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#383533] text-gray-200 rounded-lg p-4 z-40 w-[1092px] h-[720px]">
 			{/* Header Navigasi */}
-			<div className="flex justify-between items-center mb-4">
+			<div className="flex justify-center gap-4 items-center mb-4 text-[#CFC6B5]">
 				<button
 					onClick={handlePrevious}
-					className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded"
+					className="px-2 py-1 rounded text-xl font-bold hover:text-white"
 				>
 					←
 				</button>
 				<h2 className="text-xl font-semibold">{format(date, "MMMM yyyy")}</h2>
 				<button
 					onClick={handleNext}
-					className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded"
+					className="px-2 py-1 rounded text-xl font-bold hover:text-white"
 				>
 					→
 				</button>
 			</div>
 
 			{/* Tombol "Today" */}
-			<div className="mb-4 text-center">
+			{/* <div className="mb-4 text-center">
 				<button
 					onClick={handleToday}
-					className="px-3 py-1 bg-blue-600 hover:bg-blue-500 rounded text-white"
+					className="px-3 py-1 bg-[#C2AF84] hover:bg-[#887750] rounded text-white"
 				>
 					Today
 				</button>
-			</div>
+			</div> */}
 
 			{/* Hari dalam Seminggu */}
-			<div className="grid grid-cols-7 gap-1 text-center text-xs uppercase mb-2">
+			<div className="grid grid-cols-7 gap-1 text-end text-xs uppercase mb-2">
 				{["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Ahad"].map(
 					(day) => (
-						<div key={day} className="p-1">
+						<div key={day} className="p-1 text-[#CFC6B5]">
 							{day}
 						</div>
 					)
@@ -112,7 +112,7 @@ export function MonthCalendar({
 			</div>
 
 			{/* Grid Hari */}
-			<div className="grid grid-cols-7 gap-1">
+			<div className="grid grid-cols-7 gap-4">
 				{days.map((day) => {
 					const isCurrentMonth = isSameMonth(day, date);
 					const isToday = isSameDay(day, new Date()); // Perbarui ke tanggal saat ini
@@ -122,21 +122,21 @@ export function MonthCalendar({
 						<div
 							key={day.toISOString()}
 							className={cn(
-								"p-2 text-center rounded",
-								isCurrentMonth ? "bg-gray-700" : "bg-gray-900 text-gray-500",
-								isToday && "border-2 border-blue-500"
+								"p-2 text-center rounded-xl w-[140px] h-[85px]",
+								isCurrentMonth ? "bg-[#1F1B18]" : "bg-[#302C29] text-white/70",
+								isToday && "border-2 border-[#C2AF84]"
 							)}
 						>
-							<div className="text-sm font-medium">{format(day, "d")}</div>
+							<div className="text-sm text-end font-medium">{format(day, "d")}</div>
 							{dayEvents.length > 0 && (
-								<div className="text-xs text-gray-400">
+								<div className="text-xs ] text-start">
 									{dayEvents.map((event, index) => (
 										<div key={index}>{event}</div>
 									))}
 								</div>
 							)}
 							{isCurrentMonth && dayEvents.length === 0 && (
-								<div className="text-xs text-gray-400">
+								<div className="text-xs text-[#C2AF84] text-start ">
 									- Kajian Umum
 									<br />- Rapot Web
 								</div>
