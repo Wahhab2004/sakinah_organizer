@@ -6,7 +6,7 @@ import React from "react";
 
 export default function FAQ() {
 	return (
-		<div className="relative h-[1600px] lg:h-[2200px]">
+		<div className="relative h-[1600px] md:h-[1800px] lg:h-[2200px]">
 			<Image
 				className="absolute z-10 w-full h-[2200px] object-cover top-0 left-0 right-0 bottom-0"
 				width={2000}
