@@ -43,8 +43,7 @@ export function HeroSection() {
 						impian Anda dengan detail yang indah dan penuh makna.
 					</p>
 
-					{/* Button yang lain belum sama kek gini. Ini dijadikan acuan aja nanti */}
-					<button className="bg-[#302C29] w-[170px] sm:w-[190px] md:w-[220px] h-[35px] md:h-[40px] lg:mt-3 text-center text-white rounded-lg flex items-center justify-center mx-auto md:mx-0 text-sm sm:text-base md:text-lg lg:text-xl hover:bg-[#2C2927] hover:text-[#E1CD9F] transition duration-300">
+					<button className="bg-[#302C29] w-[120px] sm:w-[140px] md:w-[160px] mt-6 mx-auto lg:mx-0 py-2 rounded text-[#C2AF84] text-xs sm:text-base md:text-lg lg:text-xl hover:bg-[#211E1B] transition duration-300">
 						<Link href="/package">Our Package</Link>
 					</button>
 				</div>

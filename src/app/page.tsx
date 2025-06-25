@@ -9,7 +9,6 @@ export default function Home() {
 		<div>
 			<HeroSection />
 			<AboutUs />
-
 			<PhotoCollage />
 			<LoveStory />
 			<Video />

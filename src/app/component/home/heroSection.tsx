@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
 	return (
@@ -44,9 +45,9 @@ export default function HeroSection() {
 						sentuhan elegan dan penuh makna. Kami berkomitmen menjadikan momen
 						sakral Anda indah, berkesan, dan tak terlupakan.
 					</p>
-                    {/* Ukurann font ini gak selaras */}
-					<button className="bg-[#302C29] w-[120px] sm:w-[140px] mt-6 mx-auto lg:mx-0 py-2 rounded text-white text-xs sm:text-base md:text-lg lg:text-xl hover:bg-[#E1CD9F] transition duration-300">
-						Our Service
+
+					<button className="bg-[#302C29] w-[120px] sm:w-[140px] md:w-[160px] mt-6 mx-auto lg:mx-0 py-2 rounded text-[#C2AF84] text-xs sm:text-base md:text-lg lg:text-xl hover:bg-[#211E1B] transition duration-300">
+						<Link href="/our-service">Our Service</Link>
 					</button>
 				</div>
 			</div>

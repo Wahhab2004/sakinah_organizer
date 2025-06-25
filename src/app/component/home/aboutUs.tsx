@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutUs() {
 	return (
-		<section className="relative min-h-screen w-full bg-[#59543E] overflow-hidden h-[150vh] sm:h-[170vh] md:h-[200vh] lg:h-[180vh] xl:h-[150vh]">
+		<section className="relative min-h-screen w-full bg-[#59543E] overflow-hidden h-[170vh] sm:h-[170vh]  md:h-[120vh] lg:h-[160vh]">
 			{/* Background Image */}
 			<Image
 				className="h-[70vh] sm:h-[80vh] md:h-[100vh] lg:h-[180vh] w-full object-cover z-20"
@@ -15,28 +16,37 @@ export default function AboutUs() {
 			<div className="absolute inset-0 z-30 pointer-events-none bg-gradient-to-t from-[#59543E] from-10% via-[#6B664E]/90 from-40% to-[#F8F0CC]" />
 
 			{/* About Us Section */}
-			<div className="absolute top-0 right-0 bg-[#302C29] h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[30rem] w-full  lg:w-[60rem] z-40 rounded-bl-[50px] sm:rounded-bl-[100px] lg:rounded-bl-full ">
-				<div className="px-4 sm:px-6 md:px-8 sm:ml-[3rem]  md:ml-[5rem] lg:ml-[12rem] xl:ml-[15rem] mt-4 sm:mt-6 md:mt-8">
+			<div className="absolute top-0 right-0 bg-[#302C29] h-[80vh] sm:h-[100vh] md:h-[40rem] lg:h-[35rem] w-full  lg:w-[70rem] z-40 rounded-bl-[50px] sm:rounded-bl-[100px] lg:rounded-bl-[150px] xl:rounded-bl-[300px] ">
+				<div className="px-4 sm:px-6 md:px-8  mt-4 sm:mt-6 md:mt-8 flex flex-col justify-center items-start h-full lg:ml-[5rem] ">
 					<h1 className="font-head text-white text-[36px] sm:text-5xl md:text-6xl lg:text-[80px]">
 						About Us
 					</h1>
-					<p className="text-white text-xs sm:text-base md:text-lg lg:text-xl text-justify italic max-w-full sm:max-w-lg md:max-w-xl lg:max-w-[40rem] mt-2 sm:mt-4">
-						Sakinah Wedding adalah layanan pernikahan profesional yang
-						menghadirkan konsep elegan, islami, dan penuh makna. Kami
-						menyediakan paket pernikahan lengkap mulai dari dekorasi, rias
-						pengantin, dokumentasi, hingga catering halal. Dengan tim yang
-						berpengalaman dan pelayanan yang personal, kami siap mewujudkan
-						momen sakral Anda menjadi kenangan yang tak terlupakan.
+					<p className="text-white text-xs sm:text-base md:text-lg lg:text-xl text-justify font-light max-w-full lg:max-w-[60rem] mt-2 sm:mt-4">
+						Sakinah Organizer adalah Wedding Organizer syar’i yang berkomitmen
+						menghadirkan pernikahan penuh berkah sesuai nilai-nilai Islam.
+						Bernaung dalam semangat dakwah Masjid Kampus UGM, Sakinah Organizer
+						lahir sebagai bagian dari ekosistem Sakinah Academy, menyelaraskan
+						visi dalam membangun keluarga muslim yang sakinah, mawaddah, wa
+						rahmah.
 					</p>
 
-					<button className="bg-[#E1CD9F] w-[120px] sm:w-[140px]  mt-4 sm:mt-6 text-xs sm:text-base md:text-lg lg:text-xl text-[#59543E] rounded py-2 md:py-2">
-						Reservation
+					<p className="text-white text-xs sm:text-base md:text-lg lg:text-xl text-justify font-light max-w-full lg:max-w-[60rem] mt-2 sm:mt-4">
+						Dengan konsep pernikahan yang elegan, tertata, dan tetap menjaga
+						kesucian syariat, kami hadir untuk membantu pasangan muslim dalam
+						merancang hari istimewa mereka dengan penuh keberkahan. Melalui
+						layanan yang profesional dan berlandaskan prinsip Islam, kami
+						berharap bisa menjadi inspirasi bagi pernikahan Islami di
+						Indonesia dan dunia.
+					</p>
+
+					<button className="bg-[#E1CD9F] w-[120px] sm:w-[140px] md:w-[160px] mt-2 sm:mt-4 md:mt-6 ml-auto py-2 rounded text-[#59543E] text-xs sm:text-base md:text-lg lg:text-xl hover:bg-[#AA9566] transition duration-300">
+						<Link href="/reservation">Reservation</Link>
 					</button>
 				</div>
 			</div>
 
 			{/* Our Services */}
-			<div className="absolute bottom-0 w-full z-40 px-4 sm:px-6 md:px-8 lg:px-16 py-4 sm:py-6 mb-5 sm:mb-3 md:mb-5 lg:mb-10">
+			<div className="absolute  bottom-0 w-full z-40 px-4 sm:px-6 md:px-8 lg:px-16 py-4 sm:py-6 mb-5 sm:mb-3 md:mb-5 lg:mb-10 mt-[5rem] md:mt-[0rem]">
 				<h1 className="text-center text-white text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-head">
 					Our Service
 				</h1>
