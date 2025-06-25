@@ -41,8 +41,7 @@ Home
 3. Our service bisa diklik dan mengarahkan ke halaman terkait
 
 Our Service
-1. Heading nya jangan kapital
-2. Space nya coba dikurangin ketika packagenya belum dibuka
+
 
 Footer
 1. Jangan lupa footer ya bro
@@ -69,6 +68,9 @@ OUR SERVICE
 - Desktop
 - Tablet
 - Phone
+---
+1. Heading nya jangan kapital ✓
+
 
 RESERVATION
 - Desktop
@@ -79,6 +81,8 @@ PACKAGE
 - Desktop
 - Tablet
 - Phone
+---
+1. Space nya coba dikurangin ketika packagenya belum dibuka
 
 FAQ
 - Desktop ✓

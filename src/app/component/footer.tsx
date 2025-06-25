@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function Footer() {
 	return (
 		<footer
-			className="bg-[#302C29] text-white py-2 px-6 md:px-10 w-full relative z-40"
+			className="bg-[#302C29] text-white py-2  w-full relative z-40 "
 			id="contact"
 		>
-			<div className="text-[#E1CD9F]/80 max-w-[1400px] mx-auto  py-4 md:p-6 mb-10 md:mb-16 lg:mb-20">
+			<div className="text-[#E1CD9F]/80 max-w-[1400px] mx-auto  p-4 md:p-6 mb-10 ">
 				{/* Brand */}
 				<div>
 					<h1 className="text-xl sm:text-2xl md:text-3xl md:text-4xl font-semibold">
@@ -178,7 +178,7 @@ export default function Footer() {
 			</div>
 
 			{/* Footer Bottom */}
-			<div className="flex justify-center items-center w-full h-[40px] md:h-[50px] lg:h-[80px] bg-[#383533]  absolute bottom-0 left-0 right-0">
+			<div className="flex justify-center items-center w-full h-[40px] md:h-[50px] lg:h-[80px] bg-[#383533] ">
 				<h2 className="italic font-semibold text-center text-xs sm:text-sm lg:text-base md:text-xl text-[#8B816F]">
 					&copy; Sakinah Organizer. All Rights Reserved
 				</h2>

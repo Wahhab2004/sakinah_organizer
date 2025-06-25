@@ -22,22 +22,29 @@ export default function Package() {
 				<Ellipse />
 			</section>
 
-			<div className="relative h-[2000px] bg-[#59543E] mx-auto">
-
+			<div className="relative bg-[#59543E] mx-auto min-h-screen md:min-h-[1600px] ">
 				{/* PR: Gimana caranya dia melebarnya itu ketika di expanded */}
 				<Image
-					className="absolute z-10 w-full h-[2050px] object-cover top-0 left-0 right-0 bottom-0"
+					className="hidden md:block absolute z-10 w-full h-[800px] md:h-[1800px] object-cover top-0 left-0 right-0 bottom-0"
 					width={2000}
 					height={5000}
 					src="/svg/bg-package-02.svg"
 					alt="hero"
 				/>
 
-				<div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-b from-[#59543E] from-30% via-[#F8F0CC]/10 from-10% to-[#F8F0CC]/40 h-[2200px]" />
+				<Image
+					className=" md:hidden absolute z-10 w-full h-full  min-h-[800px] object-cover top-0 left-0 right-0 bottom-0"
+					width={2000}
+					height={5000}
+					src="/svg/bg-package-02.svg"
+					alt="hero"
+				/>
 
-				{/* Package Details */}
-				{/* Package Title */}
-				<div className="text-white top-0 right-0 left-0  text-center w-[100%] mx-auto z-30 absolute bg-[#59543E] h-[600px]">
+				<div className="absolute hidden md:block inset-0 z-20 pointer-events-none bg-gradient-to-b from-[#59543E] from-30% via-[#F8F0CC]/10 from-40% to-[#F8F0CC]/40 h-[1800px]" />
+
+				<div className="md:hidden absolute inset-0 z-20  pointer-events-none bg-gradient-to-b from-[#59543E] from-50% via-[#F8F0CC]/10 from-10% to-[#F8F0CC]/40 h-[800px]" />
+
+				<div className="text-white top-0 right-0 left-0  text-center w-[100%] mx-auto z-30 absolute bg-[#59543E]  md:h-[600px]">
 					<h1 className="font-head text-3xl sm:text-4xl md:text-5xl lg:text-[64px]  mt-[8rem] sm:mt-[10rem] md:mt-[12rem] lg:mt-[15rem]">
 						Akad Package
 					</h1>
