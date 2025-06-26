@@ -1,5 +1,6 @@
-import { MonthCalendar } from "@/app/(user)/reservation/calendar";
+
 import CurrentDate from "@/app/component/CurrentDate";
+import { MonthCalendar } from "./calendarAdmin";
 
 export default function DashboardPage() {
 	return (
