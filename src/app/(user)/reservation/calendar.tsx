@@ -14,7 +14,7 @@ import {
 	isSameMonth,
 } from "date-fns";
 import { cn } from "@/lib/utils";
-
+import { CalendarEvent, fetchCalendarEvents } from "@/fetching";
 
 interface Event {
 	title: string;
@@ -28,9 +28,22 @@ interface MonthCalendarProps {
 
 export function MonthCalendar({
 	currentDate = new Date(),
-	events = [],
 }: MonthCalendarProps) {
 	const [date, setDate] = useState(currentDate);
+	const [calendar, setCalendar] = useState<CalendarEvent[]>([]);
+
+	// Ambil data event dari API
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const data = await fetchCalendarEvents();
+				setCalendar(data);
+			} catch (error) {
+				console.error("Error fetching calendar events:", error);
+			}
+		};
+		fetchData();
+	}, []);
 
 	// Sinkronkan dengan tanggal saat ini saat komponen dimuat
 	useEffect(() => {
@@ -66,12 +79,6 @@ export function MonthCalendar({
 	// };
 
 	// Ambil event untuk hari tertentu
-	const getEventsForDay = (day: Date): string[] => {
-		return events
-			.filter((event) => isSameDay(event.date, day))
-			.map((event) => event.title);
-	};
-
 	return (
 		<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#383533] text-gray-200 rounded-lg p-4 z-40 w-[1092px] h-[720px]">
 			{/* Header Navigasi */}
@@ -117,7 +124,7 @@ export function MonthCalendar({
 				{days.map((day) => {
 					const isCurrentMonth = isSameMonth(day, date);
 					const isToday = isSameDay(day, new Date()); // Perbarui ke tanggal saat ini
-					const dayEvents = getEventsForDay(day);
+			
 
 					return (
 						<div
@@ -128,20 +135,33 @@ export function MonthCalendar({
 								isToday && "border-2 border-[#C2AF84]"
 							)}
 						>
-							<div className="text-sm text-end font-medium">{format(day, "d")}</div>
-							{dayEvents.length > 0 && (
-								<div className="text-xs ] text-start">
-									{dayEvents.map((event, index) => (
-										<div key={index}>{event}</div>
-									))}
-								</div>
-							)}
-							{isCurrentMonth && dayEvents.length === 0 && (
-								<div className="text-xs text-[#C2AF84] text-start ">
-									- Kajian Umum
-									<br />- Rapot Web
-								</div>
-							)}
+							<div className="text-sm text-end font-medium">
+								{format(day, "d")}
+							</div>
+
+							{calendar
+								.filter((event) => isSameDay(new Date(event.date), day))
+								.map((event) => (
+									<div
+										key={event.id}
+										className="text-xs text-[#C2AF84] text-start"
+									>
+										<div className="relative group ">
+											<li className="truncate max-w-full overflow-hidden whitespace-nowrap cursor-pointer">
+												{event.event_name}
+											</li>
+
+											<div className="absolute hidden z-50  group-hover:block bg-black text-white text-xs rounded-md p-2 w-[200px] top-6 left-0 shadow-l ">
+												<p>Acara : {event.event_name}</p>
+												<p>Tempat : {event.room_name}</p>
+												<p>
+													Waktu : {event.time_start?.slice(0, 5)} -{" "}
+													{event.time_end?.slice(0, 5)}
+												</p>
+											</div>
+										</div>
+									</div>
+								))}
 						</div>
 					);
 				})}
