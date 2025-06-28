@@ -28,8 +28,8 @@ export default function Navbar() {
 
 	const navStyle = `items-center bg-[#302C29]/60 absolute lg:fixed left-1/2 transform -translate-x-1/2 z-50 shadow-md w-full transition-all duration-500 ${
 		isScrolled
-			? "lg:top-10 lg:rounded-full lg:w-[80%] xl:w-[60%]"
-			: "lg:top-0 lg:rounded-none lg:w-screen"
+			? "lg:top-10 lg:rounded-full lg:w-[80%] xl:w-[70%]"
+			: "lg:top-0 lg:rounded-none lg:w-full"
 	}`;
 
 	const linkStyle = (menuPath: string) => `

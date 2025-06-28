@@ -19,18 +19,16 @@ export default function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
-}>) 
-
-{
-	const location = typeof window !== "undefined" ? window.location : { pathname: "/" };
-	const path = ["/", "/admin", "/dashboard", "/login", "/register"];
+}>) {
+	const location =
+		typeof window !== "undefined" ? window.location : { pathname: "/" };
+	const path = ["/admin", "/dashboard", "/login", "/register"];
 	return (
 		<html lang="en">
 			<body className={`${fontBody.className} antialiased`}>
 				{!path.includes(location.pathname) && <Navbar />}
 				{children}
 				{!path.includes(location.pathname) && <Footer />}
-			
 			</body>
 		</html>
 	);
