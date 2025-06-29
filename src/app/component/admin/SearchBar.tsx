@@ -17,9 +17,7 @@ export default function SearchBar<T>({
 	loading = false,
 }: SearchBarProps<T>) {
 	const [searchQuery, setSearchQuery] = useState("");
-
-	// Utility untuk akses nested key, misal 'guest.name'
-
+	
 
 	useEffect(() => {
 		if (!searchQuery) {
@@ -51,7 +49,7 @@ export default function SearchBar<T>({
 	const handleClear = () => setSearchQuery("");
 
 	return (
-		<div className="mb-4 flex justify-end mr-20">
+		<div>
 			<div className="flex items-center border border-gray-300 rounded-lg px-3 py-2 shadow-sm bg-white focus-within:ring-2 focus-within:ring-blue-500 transition-all duration-200 w-full max-w-md">
 				{/* Icon Search */}
 				<svg

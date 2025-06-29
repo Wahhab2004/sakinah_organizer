@@ -1,51 +1,4 @@
 // Room
-export interface Room {
-	pricePerNight: number;
-	image: string;
-	id: string;
-	rating: number;
-	roomNumber: string;
-	roomStatus: string;
-}
-
-// Payment
-export interface Payments {
-	id: string;
-	idReservation: string;
-	totalAmountPaid: number;
-	paymentMethod: string;
-	paymentStatus: string;
-	proofOfPayment: string;
-	sender: string;
-}
-
-// Review
-export interface Review {
-	id: string;
-	idReservation: string;
-	idRoom: string;
-	idAccount: string;
-	rating: number;
-	review: string;
-	reviewDate: Date;
-}
-
-// Account
-export interface Account {
-	id: string;
-	name: string;
-	username: string;
-	gender: string;
-	dataOfBirth: string;
-	phoneNumber: string;
-	photoProfile: string;
-	email: string;
-	password: string;
-	passport: string;
-	country: string;
-	role: string;
-}
-
 export interface CalendarEvent {
 	id: number;
 	date: string; // format: "YYYY-MM-DD"
@@ -83,6 +36,62 @@ export interface CalendarEvent {
 }
 
 
+export interface User{
+	id: number;
+	username: string;
+	password: string; // sebaiknya tidak disimpan dalam bentuk plaintext
+	email: string;
+	phone_number: string;
+	role: string; // bisa "SuperAdmin", "Admin", atau lainnya
+}
+
+
+export const fetchUsers = async (): Promise<User[]> => {
+	try {
+		const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+		const response = await fetch(`${baseUrl}/users`, {
+			cache: "no-store",
+		});
+		const jsonData = await response.json();
+		return jsonData.data as User[];
+	} catch (error) {
+		console.error("Error fetching users:", error);
+		return [];
+	}
+};
+
+export const fetchUserById = async (id: string): Promise<User | null> => {
+	try {
+		const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+		const response = await fetch(`${baseUrl}/users/${id}`, {
+			cache: "no-store",
+		});
+		if (!response.ok) {
+			throw new Error(`Error fetching user with ID ${id}`);
+		}
+		const jsonData = await response.json();
+		return jsonData.data as User;
+	} catch (error) {
+		console.error("Error fetching user by ID:", error);
+		return null;
+	}
+};
+
+
+export const handleDeleteUser = async (id: number): Promise<void> => {
+	try {
+		const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+		const response = await fetch(`${baseUrl}/users/${id}`, {
+			method: "DELETE",
+		});
+		if (!response.ok) {
+			throw new Error(`Error deleting user with ID ${id}`);
+		}
+	} catch (error) {
+		console.error("Error deleting user:", error);
+	}
+};
+
 export const fetchCalendarEvents = async (): Promise<CalendarEvent[]> => {
 	try {
 		const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
@@ -98,62 +107,21 @@ export const fetchCalendarEvents = async (): Promise<CalendarEvent[]> => {
 	}
 };
 
-export const fetchRooms = async (): Promise<Room[]> => {
+export const fetchCalendarEventById = async (
+	id: number
+): Promise<CalendarEvent | null> => {
 	try {
 		const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-		const response = await fetch(`${baseUrl}/room`, {
+		const response = await fetch(`${baseUrl}/calendar/${id}`, {
 			cache: "no-store",
 		});
+		if (!response.ok) {
+			throw new Error(`Error fetching event with ID ${id}`);
+		}
 		const jsonData = await response.json();
-
-		return jsonData.data as Room[];
+		return jsonData.data as CalendarEvent;
 	} catch (error) {
-		console.error("Error fetching rooms:", error);
-		return [];
-	}
-};
-
-export const fetchRoomById = async (id: string): Promise<Room | null> => {
-	try {
-		const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-		const response = await fetch(`${baseUrl}/room?id=${id}`, {
-			cache: "no-store",
-		});
-		const jsonData = await response.json();
-
-		return jsonData.data as Room;
-	} catch (error) {
-		console.error("Error fetching room by ID:", error);
+		console.error("Error fetching calendar event by ID:", error);
 		return null;
-	}
-};
-
-export const fetchAccount = async (): Promise<Account[]> => {
-	try {
-		const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-		const response = await fetch(`${baseUrl}/guests`, {
-			cache: "no-store",
-		});
-		const jsonData = await response.json();
-
-		return jsonData.data as Account[];
-	} catch (error) {
-		console.error("Error fetching reservations:", error);
-		return [];
-	}
-};
-
-export const fetchPayments = async (): Promise<Payments[]> => {
-	try {
-		const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-		const response = await fetch(`${baseUrl}/payments`, {
-			cache: "no-store",
-		});
-		const jsonData = await response.json();
-
-		return jsonData.data as Payments[];
-	} catch (error) {
-		console.error("Error fetching reservations:", error);
-		return [];
 	}
 };

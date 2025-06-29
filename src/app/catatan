@@ -101,3 +101,7 @@ Catatan:
 1. Reservasi tidak perlu ada halaman detail
 2. Tambahkan tooltitp untuk kalender
 3. Jangan lupa nanti fungsionalitas update dan delete nya
+4. Sementara package strip dulu saja
+5. Tamabahin search, export, dan tambah
+6. Layanan tambahan akan muncul ketika dia mengklik paket. Dan pengisiannya dalam bentuk deskripsi
+7. Gimana caranya dia ketika tambah langsung ter render (di bagian user)

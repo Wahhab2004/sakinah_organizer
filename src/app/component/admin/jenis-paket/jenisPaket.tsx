@@ -112,7 +112,7 @@ export default function JenisPaketPage() {
 										>
 											Edit
 										</button>
-										<AlertDelete onDelete={() => handleDelete(jenis.id)} />
+										<AlertDelete onDelete={async () => handleDelete(jenis.id)} />
 									</td>
 								</tr>
 							))

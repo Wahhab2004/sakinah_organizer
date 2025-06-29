@@ -13,7 +13,7 @@ import {
 export default function AlertDelete({
   onDelete,
 }: {
-  onDelete: () => void;
+  onDelete: () => Promise<void>;
 }) {
   return (
     <AlertDialog>
@@ -22,9 +22,9 @@ export default function AlertDelete({
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Hapus Reservasi</AlertDialogTitle>
+          <AlertDialogTitle>Hapus User</AlertDialogTitle>
           <AlertDialogDescription>
-            Apakah Anda yakin ingin menghapus reservasi ini? Tindakan ini tidak
+            Apakah Anda yakin ingin menghapus user ini? Tindakan ini tidak
             dapat dibatalkan.
           </AlertDialogDescription>
         </AlertDialogHeader>

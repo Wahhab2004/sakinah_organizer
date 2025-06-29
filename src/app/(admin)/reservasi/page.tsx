@@ -149,7 +149,7 @@ export default function Reservasi() {
 											Edit
 										</button>
 										<AlertDelete
-											onDelete={() => handleDelete(reservasi.id)}
+											onDelete={async () => handleDelete(reservasi.id)}
 										/>
 									</td>
 								</tr>
