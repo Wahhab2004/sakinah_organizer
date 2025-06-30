@@ -22,8 +22,6 @@ interface EditUserProps {
 	} | null;
 }
 
-
-
 interface EditUserPayload {
 	username: string;
 	email: string;
@@ -98,8 +96,16 @@ const EditUser: React.FC<EditUserProps> = ({
 				throw new Error("Gagal memperbarui user");
 			}
 
-			const updatedUser = await response.json();
+			let updatedUser = null;
+			try {
+				const text = await response.text();
+				updatedUser = text ? JSON.parse(text) : null;
+			} catch (e) {
+				console.warn("Gagal parsing JSON response:", e);
+			}
+
 			onSave(updatedUser);
+
 			onClose();
 			alert("User berhasil diperbarui!");
 		} catch (error) {
@@ -140,7 +146,9 @@ const EditUser: React.FC<EditUserProps> = ({
 					<input
 						type="text"
 						value={formData.username}
-						readOnly
+						onChange={(e) =>
+							setFormData({ ...formData, username: e.target.value })
+						}
 						className="w-full p-2 border border-gray-300 rounded-xl"
 					/>
 				</div>

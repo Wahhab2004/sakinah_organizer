@@ -63,15 +63,6 @@ const AddUser: React.FC<AddUserProps> = ({ isOpen, onClose, onSave }) => {
 
 	if (!isOpen) return null;
 
-	const isFormValid =
-		formData.username.trim() !== "" &&
-		formData.password.trim() !== "" &&
-		formData.repassword.trim() !== "" &&
-		formData.email.trim() !== "" &&
-		formData.phone_number.trim() !== "" &&
-		formData.role.trim() !== "" &&
-		isPasswordMatch;
-
 	return (
 		<div
 			className="modal"
@@ -101,17 +92,16 @@ const AddUser: React.FC<AddUserProps> = ({ isOpen, onClose, onSave }) => {
 
 				{[
 					{ label: "Username", key: "username", type: "text" },
-					{ label: "Email", key: "email", type: "text" },
-					{ label: "Phone", key: "phone_number", type: "text" },
 					{ label: "Password", key: "password", type: "password" },
 					{ label: "Re-Password", key: "repassword", type: "password" },
+					{ label: "Email", key: "email", type: "text" },
+					{ label: "Phone", key: "phone_number", type: "text" },
 				].map((field) => (
 					<div className="mb-4" key={field.key}>
 						<label className="text-sm">{field.label}</label>
 						<input
 							type={field.type}
 							value={formData[field.key as keyof FormDataType] || ""}
-							placeholder={`Masukkan ${field.label.toLowerCase()}`}
 							onChange={(e) =>
 								setFormData({ ...formData, [field.key]: e.target.value })
 							}
@@ -146,7 +136,7 @@ const AddUser: React.FC<AddUserProps> = ({ isOpen, onClose, onSave }) => {
 				<div>
 					<button
 						onClick={handleSave}
-						disabled={!isFormValid}
+						disabled={!isPasswordMatch}
 						style={{
 							padding: "5px 10px",
 							background: "#4CAF50",
